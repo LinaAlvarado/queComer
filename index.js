@@ -98,6 +98,8 @@ const fetchIngredients = async (ingredientSelected) => {
 };
 
 const renderMealsByIngredient =(dataMeals)=>{
+  
+
   const view = dataMeals.map(meal => `
   <div>
       <div class="container-img">
@@ -110,13 +112,21 @@ const renderMealsByIngredient =(dataMeals)=>{
 containerMealsByIngredient.innerHTML = view;
 }
 
+const  eventClickIngredient = (buttonClass) => {
+  console.log(buttonClass)
+  const button = document.querySelector(buttonClass);
+  const ingredient = buttonClass.substring(1)
+  button.addEventListener("click", ()=> fetchIngredients(ingredient))
+};
+
 const fetchByIngredient = () => {
-  attachClickEvent("Breakfast");
-  attachClickEvent("Vegetarian");
-  attachClickEvent("Dessert");
+  eventClickIngredient(".Beef");
+  eventClickIngredient(".Avocado");
+  eventClickIngredient(".Veal");
+  eventClickIngredient(".Celery");
 };
 
 
 fetchData(urlInicio);
 fetchCategory();
-fetchIngredients("Beef");
+fetchByIngredient();
