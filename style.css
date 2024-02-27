@@ -23,15 +23,16 @@
 
 body {
   font-family: var(--text-font-family);
-  width: 60%;
+  width: 100%;
+  /* width: 70%;
   padding: 0;
-  margin: 0 20%;
+  margin: 0 15%; */
 }
 
 h1 {
   font-family: var(--Title-font-family);
   font-weight: 800;
-  font-size: 55px;
+  font-size: 40px;
 }
 
 h2,
@@ -47,9 +48,10 @@ p {
 }
 
 header {
+  width: 100%;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
   position: sticky;
   top: 0px;
   z-index: 1;
@@ -60,18 +62,19 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 350px;
+  width: 80%;
 }
 
 .input-search {
   border: none;
   border-radius: 1rem;
-  width: 80%;
+  width: 60%;
   padding: 10px;
   background-color: var(--light-grey);
 }
 
 .input-buttonSearch {
+  width: 40%;
   border: none;
   border-radius: 1rem;
   padding: 10px;
@@ -85,51 +88,51 @@ header {
 
 .main-section {
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  padding-bottom: 1rem;
 }
 
+.main-section img {
+  width: 250px;
+}
 .container-description {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 4rem;
-  width: 330px;
+  margin: 0 2rem;
   text-align: center;
 }
 
 .container-description p {
-  font-size: 20px;
+  font-size: 16px;
 }
 
-/* .section-mealsFilters{
-  display: flex;
-} */
+.section-mealsFilters{
+  padding: 1rem;
+}
 
 .subtitle-h2 {
   font-size: 30px;
-}
-
-.section-mealsFilters {
-  margin: 3rem 0rem 3rem 0rem;
+  line-height: 2rem;
+  margin-bottom: 1rem;
 }
 
 .section-mealsFilters button {
   width: 300px;
   height: 45px;
   border-radius: 1rem;
-
   font-weight: bold;
   font-size: 18px;
   font-family: var(--Title-font-family);
   margin: 5px;
-  /* transition: all 1s ease-out; */
 }
 
 .container-ButtonsFilters {
   display: flex;
-  justify-content: space-around;
-  margin: 3rem 0rem 3rem 0rem;
+  justify-content: space-between;
+  margin: 1rem 0rem 3rem 0rem;
 }
 
 .button-breakfast {
@@ -163,19 +166,15 @@ header {
   border: 2px solid #04446a;
 }
 
-/* .section-mealsFilters button:active{
-    border: 2px solid #04446A;
-} */
-
 .container-img {
-  width: 200px;
-  height: 230px;
+  width: 300px;
+  height: 200px;
   overflow: hidden;
   border-radius: 1rem;
 }
 
 .container-img img {
-  height: 240px;
+  height: 300px;
 }
 
 .container-img:hover {
@@ -183,10 +182,21 @@ header {
 }
 
 .container-meals {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  column-gap: 10px;
+  /* display: grid;
+  grid-template-columns: repeat(1, 1fr);
   row-gap: 15px;
+  align-items: center;
+  width: 100%; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center ;
+}
+
+.container-meals div {
+  width: 300px;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .title-meals {
@@ -195,12 +205,13 @@ header {
 }
 
 .section-mealsFiltersByIngredients {
-  margin: 3rem 0rem 3rem 0rem;
+  margin: 1rem;
 }
 
 .container-ButtonsIngredients {
-  display: flex;
-  justify-content: space-around;
+   display: flex;
+   flex-flow: row ;
+  justify-content: space-around; 
 }
 
 .button-ingredient {
@@ -209,14 +220,78 @@ header {
   border-radius: 50%;
 }
 
+.button-ingredient img{
+  width: 60px;
+}
+
 .button-ingredient:hover {
   background-color: var(--lightYellow-hover);
   box-shadow: 5px 5px 15px 1px rgba(255, 240, 156, 0.74);
 }
 
-.conteiner-MainIngredientMeal{
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    column-gap: 10px;
-    row-gap: 15px;
+.conteiner-MainIngredientMeal {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  column-gap: 10px;
+  row-gap: 15px;
+}
+
+/* Estilos para tablets */
+@media screen and (min-width: 601px) and (max-width: 1439px) {
+  .container_input_search {
+    justify-content: flex-end;
+  }
+  
+  .input-search {
+    width: 400px;
+  }
+
+  .input-buttonSearch {
+    margin-left: 10px;
+    width: 100px;
+  }
+
+  .main-section {
+    display: flex;
+    flex-flow: row;
+  }
+
+  .container-description p {
+    font-size: 20px;
+  }
+}
+
+/* Estilos para desktop */
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
+  h1{
+    font-size: 50px;
+  }
+
+  .container_input_search {
+    justify-content: flex-end;
+  }
+
+  .input-buttonSearch {
+    margin-left: 10px;
+    width: 100px;
+  }
+
+  .input-search {
+    width: 400px;
+  }
+
+  .container-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .container-description p {
+    font-size: 20px;
+  }
+
+  .main-section img {
+    width: 300px;
+  }
 }
