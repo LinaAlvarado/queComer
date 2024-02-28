@@ -117,6 +117,7 @@ header {
   font-size: 30px;
   line-height: 2rem;
   margin-bottom: 1rem;
+
 }
 
 .section-mealsFilters button {
@@ -182,11 +183,6 @@ header {
 }
 
 .container-meals {
-  /* display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  row-gap: 15px;
-  align-items: center;
-  width: 100%; */
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -205,7 +201,7 @@ header {
 }
 
 .section-mealsFiltersByIngredients {
-
+padding: 1rem;
 }
 
 .container-ButtonsIngredients {
@@ -272,10 +268,27 @@ footer a{
   .container-description p {
     font-size: 20px;
   }
+  .container-ButtonsFilters {
+    justify-content:center;
+   
+  }
+
+  .container-ButtonsIngredients {
+ 
+    justify-content:center;
+   
+    gap: 2rem;
+  
+  }
 }
 
 /* Estilos para desktop */
 @media screen and (min-width: 1440px) and (max-width: 2560px) {
+  body{
+    width: 50%;
+    margin: 0 25%;
+  }
+
   h1 {
     font-size: 50px;
   }
@@ -306,5 +319,22 @@ footer a{
 
   .main-section img {
     width: 300px;
+  }
+
+  .container-ButtonsFilters {
+    justify-content:center;
+   
+  }
+
+  .container-ButtonsIngredients {
+ 
+    justify-content:center;
+   
+    gap: 2rem;
+  
+  }
+
+  footer{
+    background-color: #ffffff;
   }
 }
