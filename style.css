@@ -109,7 +109,7 @@ header {
   font-size: 16px;
 }
 
-.section-mealsFilters{
+.section-mealsFilters {
   padding: 1rem;
 }
 
@@ -190,7 +190,7 @@ header {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center ;
+  align-items: center;
 }
 
 .container-meals div {
@@ -205,13 +205,16 @@ header {
 }
 
 .section-mealsFiltersByIngredients {
-  margin: 1rem;
+
 }
 
 .container-ButtonsIngredients {
-   display: flex;
-   flex-flow: row ;
-  justify-content: space-around; 
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .button-ingredient {
@@ -220,28 +223,38 @@ header {
   border-radius: 50%;
 }
 
-.button-ingredient img{
-  width: 60px;
-}
-
 .button-ingredient:hover {
   background-color: var(--lightYellow-hover);
   box-shadow: 5px 5px 15px 1px rgba(255, 240, 156, 0.74);
 }
 
 .conteiner-MainIngredientMeal {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  column-gap: 10px;
-  row-gap: 15px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
 }
+
+footer{
+  padding: 1rem;
+  background-color: #f8f8f8;
+  text-align: center;
+  font-size: 15px;
+}
+
+footer a{
+  font-weight: bolder;
+  color: var(--PrimaryColor);
+}
+
 
 /* Estilos para tablets */
 @media screen and (min-width: 601px) and (max-width: 1439px) {
   .container_input_search {
     justify-content: flex-end;
   }
-  
+
   .input-search {
     width: 400px;
   }
@@ -263,7 +276,7 @@ header {
 
 /* Estilos para desktop */
 @media screen and (min-width: 1440px) and (max-width: 2560px) {
-  h1{
+  h1 {
     font-size: 50px;
   }
 
@@ -286,7 +299,7 @@ header {
     align-items: center;
     text-align: center;
   }
-  
+
   .container-description p {
     font-size: 20px;
   }
