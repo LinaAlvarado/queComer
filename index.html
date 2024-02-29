@@ -20,67 +20,77 @@
         <img src="img/logo-cel.svg" alt="logo de Quecomer">
 
         <div class="container_input_search">
-            <input type="search" name="" placeholder="Pancakes..." class="input-search">
-            <input type="submit" value="Buscar" class="input-buttonSearch">
+            
+           <div class="search">
+            <input type="search" class="input-search" placeholder="Search" class="">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" class="input-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+            </svg>
+           </div>
+                
+            
         </div>
     </header>
+    <section class="content">
+        <main class="main-section">
 
-    <main class="main-section">
-
-        <div class="container-description">
-            <h1> QueComer</h1>
-            <p> Encuentra que plato cocinarás hoy
-               <b>+ 100 recetas disponibles</b></p>
-        </div>
-
-        <img src="img/ilustrationCook.png" alt="Dibujo de hombre cocinando">
-
-    </main>
-
-    <section class="section-mealsFilters">
-        <h2 class="subtitle-h2"> ¿Qué plato buscas? </h2>
-
-        <!-- esto sera un boton de filtro -->
-        <div class="container-ButtonsFilters">
-            <button class="button-breakfast buttonFilter pressed"> Desayuno </button>
-            <button class="button-lunch buttonFilter"> Almuerzo </button>
-            <button class="button-dessert buttonFilter"> Postre </button>
-        </div>
-        
-
-        <!-- Aqui se pondran las tarjetas de la comida -->
-        <section class="container-meals">
+            <div class="container-description">
+                <h1> QueComer</h1>
+                <p> Encuentra que plato cocinarás hoy
+                   <b>+ 100 recetas disponibles</b></p>
+            </div>
+    
+            <img src="img/ilustrationCook.png" alt="Dibujo de hombre cocinando">
+    
+        </main>
+    
+        <section class="section-mealsFilters">
+            <h2 class="subtitle-h2"> ¿Qué plato buscas? </h2>
+    
+            <!-- esto sera un boton de filtro -->
+            <div class="container-ButtonsFilters">
+                <button class="button-breakfast buttonFilter pressed"> Desayuno </button>
+                <button class="button-lunch buttonFilter"> Almuerzo </button>
+                <button class="button-dessert buttonFilter"> Postre </button>
+            </div>
             
+    
+            <!-- Aqui se pondran las tarjetas de la comida -->
+            <section class="container-meals">
+                
+            </section>
+    
         </section>
-
+        
+        <section class="section-mealsFiltersByIngredients">
+            <h2 class="subtitle-h2"> ¿Buscas algún ingrediente en especial? </h2>
+             <div class="container-ButtonsIngredients">
+               <button class="button-ingredient Beef" >
+                <img src="https://www.themealdb.com/images/ingredients/Beef-Small.png" alt="Boton con imagen de carne">
+               </button>
+    
+               <button class="button-ingredient Avocado">
+                <img src="https://www.themealdb.com/images/ingredients/Avocado-Small.png" alt="Boton con imagen de aguacate">
+               </button>
+    
+               <button class="button-ingredient Veal">
+                <img src="https://www.themealdb.com/images/ingredients/Veal-Small.png" alt="Boton con imagen de carne de ternera">
+               </button>
+    
+               <button class="button-ingredient Celery">
+                <img src="https://www.themealdb.com/images/ingredients/Celery-Small.png" alt="Boton con imagen de apio">
+               </button>
+             </div> 
+    
+             <section class="conteiner-MainIngredientMeal">
+    
+             </section>
+            <!-- imagenes que funcionan como boton, van a redirigir a la pagina de resultados -->
+         </section> 
+    
     </section>
     
-    <section class="section-mealsFiltersByIngredients">
-        <h2 class="subtitle-h2"> ¿Buscas algún ingrediente en especial? </h2>
-         <div class="container-ButtonsIngredients">
-           <button class="button-ingredient Beef" >
-            <img src="https://www.themealdb.com/images/ingredients/Beef-Small.png" alt="Boton con imagen de carne">
-           </button>
-
-           <button class="button-ingredient Avocado">
-            <img src="https://www.themealdb.com/images/ingredients/Avocado-Small.png" alt="Boton con imagen de aguacate">
-           </button>
-
-           <button class="button-ingredient Veal">
-            <img src="https://www.themealdb.com/images/ingredients/Veal-Small.png" alt="Boton con imagen de carne de ternera">
-           </button>
-
-           <button class="button-ingredient Celery">
-            <img src="https://www.themealdb.com/images/ingredients/Celery-Small.png" alt="Boton con imagen de apio">
-           </button>
-         </div> 
-
-         <section class="conteiner-MainIngredientMeal">
-
-         </section>
-        <!-- imagenes que funcionan como boton, van a redirigir a la pagina de resultados -->
-     </section> 
-
     <!-- <section> -->
         <!-- testimonios de los cocineros -->
         <!-- <h2 class="subtitle-h2">Nuestros queridos cocineros opinan :)</h2>

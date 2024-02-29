@@ -1,6 +1,9 @@
 const urlInicio = `https://www.themealdb.com/api/json/v1/1/filter.php?c=Breakfast`;
 const containerMeals = document.querySelector(".container-meals");
 const containerMealsByIngredient = document.querySelector(".conteiner-MainIngredientMeal")
+const inputSearch = document.querySelector('[type="search"]')
+const searchResults = document.querySelector('.content')
+
 
 const fetchData = async (urlApi) => {
   try {
@@ -113,7 +116,6 @@ containerMealsByIngredient.innerHTML = view;
 }
 
 const  eventClickIngredient = (buttonClass) => {
-  console.log(buttonClass)
   const button = document.querySelector(buttonClass);
   const ingredient = buttonClass.substring(1)
   button.addEventListener("click", ()=> fetchIngredients(ingredient))
@@ -130,3 +132,42 @@ const fetchByIngredient = () => {
 fetchData(urlInicio);
 fetchCategory();
 fetchByIngredient();
+
+inputSearch.addEventListener('keypress', () => {
+  const wordSearch = inputSearch.value
+  
+   fetchSearch(wordSearch)
+});
+
+const fetchSearch = async (word) => {
+  const URL_SEARCH = `https://www.themealdb.com/api/json/v1/1/search.php?s=${word}`
+
+  try{
+    const response = await fetch(URL_SEARCH)
+
+    if (!response.ok) {
+      throw new Error("La solicitud falló");
+    }
+
+    const data = await response.json()
+    console.log('DATA SEARCH',data)
+    renderMealsSearh(data.meals)
+
+  }catch(error){
+    console.error("Error:", error);
+  }
+
+};
+
+const renderMealsSearh =(dataMeals)=>{
+  const view = dataMeals.map(meal => `
+  <div>
+      <div class="container-img">
+          <img src="${meal.strMealThumb}" alt="Imagen de plato de comida">
+      </div>
+      <h3 class="title-meals">${meal.strMeal}</h3>
+  </div>
+`)
+
+searchResults.innerHTML = view;
+}

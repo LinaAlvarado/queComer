@@ -24,9 +24,6 @@
 body {
   font-family: var(--text-font-family);
   width: 100%;
-  /* width: 70%;
-  padding: 0;
-  margin: 0 15%; */
 }
 
 h1 {
@@ -35,14 +32,13 @@ h1 {
   font-size: 40px;
 }
 
+h1,
 h2,
 h3 {
   font-family: var(--Title-font-family);
+  color: var(--PrimaryColor);
 }
 
-h1,
-h2,
-h3,
 p {
   color: var(--PrimaryColor);
 }
@@ -60,30 +56,31 @@ header {
 
 .container_input_search {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
-  width: 80%;
+  width: 60%;
+}
+.search {
+  width: 100%;
+  position: relative;
 }
 
 .input-search {
   border: none;
   border-radius: 1rem;
-  width: 60%;
-  padding: 10px;
+  width: 100%;
+  padding: 14px 14px 14px 35px;
   background-color: var(--light-grey);
 }
 
-.input-buttonSearch {
-  width: 40%;
-  border: none;
-  border-radius: 1rem;
-  padding: 10px;
-  color: var(--font-button-color);
-  background-color: var(--PrimaryColor);
-}
-
-.input-buttonSearch:hover {
-  background-color: var(--PrimaryColor-hover);
+.input-icon {
+  color: #191919;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .main-section {
@@ -117,7 +114,6 @@ header {
   font-size: 30px;
   line-height: 2rem;
   margin-bottom: 1rem;
-
 }
 
 .section-mealsFilters button {
@@ -202,7 +198,7 @@ header {
 }
 
 .section-mealsFiltersByIngredients {
-padding: 1rem;
+  padding: 1rem;
 }
 
 .container-ButtonsIngredients {
@@ -233,32 +229,26 @@ padding: 1rem;
   margin-bottom: 3rem;
 }
 
-footer{
+footer {
   padding: 1rem;
   background-color: #f8f8f8;
   text-align: center;
   font-size: 15px;
 }
 
-footer a{
+footer a {
   font-weight: bolder;
   color: var(--PrimaryColor);
 }
 
-
 /* Estilos para tablets */
 @media screen and (min-width: 601px) and (max-width: 1439px) {
   .container_input_search {
-    justify-content: flex-end;
+    width: 30%;
   }
 
   .input-search {
-    width: 400px;
-  }
-
-  .input-buttonSearch {
-    margin-left: 10px;
-    width: 100px;
+    width: 100%;
   }
 
   .main-section {
@@ -270,22 +260,19 @@ footer a{
     font-size: 20px;
   }
   .container-ButtonsFilters {
-    justify-content:center;
-   
+    justify-content: center;
   }
 
   .container-ButtonsIngredients {
- 
-    justify-content:center;
-   
+    justify-content: center;
+
     gap: 2rem;
-  
   }
 }
 
 /* Estilos para desktop */
 @media screen and (min-width: 1440px) and (max-width: 2560px) {
-  body{
+  body {
     width: 50%;
     margin: 0 25%;
   }
@@ -295,16 +282,11 @@ footer a{
   }
 
   .container_input_search {
-    justify-content: flex-end;
-  }
-
-  .input-buttonSearch {
-    margin-left: 10px;
-    width: 100px;
+    width: 40%;
   }
 
   .input-search {
-    width: 400px;
+    width: 100%;
   }
 
   .container-description {
@@ -323,19 +305,16 @@ footer a{
   }
 
   .container-ButtonsFilters {
-    justify-content:center;
-   
+    justify-content: center;
   }
 
   .container-ButtonsIngredients {
- 
-    justify-content:center;
-   
+    justify-content: center;
+
     gap: 2rem;
-  
   }
 
-  footer{
+  footer {
     background-color: #ffffff;
   }
 }
